@@ -1,0 +1,25 @@
+<%= form_with(model: @item, local: true) do |f|%>
+  <div class="field">
+    <%= f.label :title, "景品名" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :get_price, "獲得金額" %><br />
+    <%= f.text_area :get_price, class: :form__text1 %>円
+  </div>
+
+  <div class="field">
+    <%= f.label :detail, "詳細" %><br />
+    <%= f.text_area :detail, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "景品画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
